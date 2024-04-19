@@ -3,11 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WearFitter.App.Web.Server", "src\WearFitter.App.Web.Server\WearFitter.App.Web.Server.csproj", "{6E85AF13-3F2D-48F2-8C4E-35651480365A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WearFitter.App.Web.Server", "src\WearFitter.App.Web.Server\WearFitter.App.Web.Server.csproj", "{6E85AF13-3F2D-48F2-8C4E-35651480365A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WearFitter.App.Web.Client", "src\WearFitter.App.Web.Client\WearFitter.App.Web.Client.csproj", "{65795207-48AF-4A58-A4BB-EAF5EEEA6CA5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{719C674D-3BB9-4146-B155-942DC7FF91C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WearFitter.App.Domain", "WearFitter.App.Domain\WearFitter.App.Domain.csproj", "{BCF44EC3-E975-4DC2-9DD0-43735035DCEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{79BEFBF6-149A-4507-B683-BE997D4152C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WearFitter.App.Repository.EFCore", "WearFitter.App.Repository.EFCore\WearFitter.App.Repository.EFCore.csproj", "{42568A93-5060-4C1B-A21F-5697180E8F05}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{20F2956E-F42A-42FA-8888-95E5BE10E497}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WearFitter.EFCore.Common", "WearFitter.EFCore.Common\WearFitter.EFCore.Common.csproj", "{1292F722-AE87-49E2-B2F5-9E789B2E869D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WearFitter.Domain.Common", "WearFitter.Domain.Common\WearFitter.Domain.Common.csproj", "{95A01F70-779C-44B9-B7D5-D6AFD96D3359}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +35,22 @@ Global
 		{65795207-48AF-4A58-A4BB-EAF5EEEA6CA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65795207-48AF-4A58-A4BB-EAF5EEEA6CA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65795207-48AF-4A58-A4BB-EAF5EEEA6CA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCF44EC3-E975-4DC2-9DD0-43735035DCEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCF44EC3-E975-4DC2-9DD0-43735035DCEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCF44EC3-E975-4DC2-9DD0-43735035DCEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCF44EC3-E975-4DC2-9DD0-43735035DCEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42568A93-5060-4C1B-A21F-5697180E8F05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42568A93-5060-4C1B-A21F-5697180E8F05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42568A93-5060-4C1B-A21F-5697180E8F05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42568A93-5060-4C1B-A21F-5697180E8F05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1292F722-AE87-49E2-B2F5-9E789B2E869D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1292F722-AE87-49E2-B2F5-9E789B2E869D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1292F722-AE87-49E2-B2F5-9E789B2E869D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1292F722-AE87-49E2-B2F5-9E789B2E869D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95A01F70-779C-44B9-B7D5-D6AFD96D3359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95A01F70-779C-44B9-B7D5-D6AFD96D3359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95A01F70-779C-44B9-B7D5-D6AFD96D3359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95A01F70-779C-44B9-B7D5-D6AFD96D3359}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +58,10 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{6E85AF13-3F2D-48F2-8C4E-35651480365A} = {719C674D-3BB9-4146-B155-942DC7FF91C4}
 		{65795207-48AF-4A58-A4BB-EAF5EEEA6CA5} = {719C674D-3BB9-4146-B155-942DC7FF91C4}
+		{BCF44EC3-E975-4DC2-9DD0-43735035DCEF} = {79BEFBF6-149A-4507-B683-BE997D4152C1}
+		{42568A93-5060-4C1B-A21F-5697180E8F05} = {79BEFBF6-149A-4507-B683-BE997D4152C1}
+		{1292F722-AE87-49E2-B2F5-9E789B2E869D} = {20F2956E-F42A-42FA-8888-95E5BE10E497}
+		{95A01F70-779C-44B9-B7D5-D6AFD96D3359} = {20F2956E-F42A-42FA-8888-95E5BE10E497}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {14DF46E9-1F05-423D-90B9-8D1B2BD186F9}

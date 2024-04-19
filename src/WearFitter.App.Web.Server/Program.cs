@@ -1,3 +1,8 @@
+using Microsoft.EntityFrameworkCore;
+using WearFitter.App.Domain;
+using WearFitter.App.Repository.EFCore;
+using WearFitter.EFCore.Common.Services;
+
 namespace WearFitter.App.Web.Server;
 
 public class Program
@@ -5,6 +10,16 @@ public class Program
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
+
+        builder.Services.AddDbContext<ApplicationDbContext>(o =>
+                    {
+                        o.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+                        //o.EnableSensitiveDataLogging(Environment.IsDevelopment());
+                        //o.EnableDetailedErrors(Environment.IsDevelopment());
+                    }, contextLifetime: ServiceLifetime.Transient
+                )
+                .AddTransient<IAppUnitOfWork, AppUnitOfWork>()
+                .AddHostedService<DatabaseMigrationsBackgroundService<ApplicationDbContext>>();
 
         // Add services to the container.
         builder.Services.AddRazorComponents()
