@@ -1,7 +1,7 @@
-﻿using Cerberus.App.Repository.EFCore.Missions.Builder;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using WearFitter.App.Domain.Brands.Models;
+using WearFitter.App.Repository.EFCore.Brands.Builders;
 
 namespace WearFitter.App.Repository.EFCore;
 

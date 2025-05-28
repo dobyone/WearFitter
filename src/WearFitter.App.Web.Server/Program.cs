@@ -1,7 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using WearFitter.App.Domain;
 using WearFitter.App.Repository.EFCore;
+using WearFitter.Contracts.Brands;
 using WearFitter.EFCore.Common.Services;
+using WearFitter.Services.Server.Brands;
 
 namespace WearFitter.App.Web.Server;
 
@@ -19,12 +21,17 @@ public class Program
                     }, contextLifetime: ServiceLifetime.Transient
                 )
                 .AddTransient<IAppUnitOfWork, AppUnitOfWork>()
-                .AddHostedService<DatabaseMigrationsBackgroundService<ApplicationDbContext>>();
+                .AddHostedService<DatabaseMigrationsBackgroundService<ApplicationDbContext>>()
+                .AddTransient<IBrandsService, BrandsService>();
 
         // Add services to the container.
         builder.Services.AddRazorComponents()
             .AddInteractiveServerComponents()
             .AddInteractiveWebAssemblyComponents();
+
+        builder.Services.AddControllers();
+        //builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddSwaggerGen();
 
         var app = builder.Build();
 
@@ -38,6 +45,12 @@ public class Program
             app.UseExceptionHandler("/Error");
             // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
             app.UseHsts();
+        }
+
+        if (!app.Environment.IsProduction())
+        {
+            app.UseSwagger();
+            app.UseSwaggerUI();
         }
 
         app.UseHttpsRedirection();

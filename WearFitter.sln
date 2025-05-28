@@ -9,17 +9,29 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WearFitter.App.Web.Client",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{719C674D-3BB9-4146-B155-942DC7FF91C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WearFitter.App.Domain", "WearFitter.App.Domain\WearFitter.App.Domain.csproj", "{BCF44EC3-E975-4DC2-9DD0-43735035DCEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WearFitter.App.Domain", "WearFitter.App.Domain\WearFitter.App.Domain.csproj", "{BCF44EC3-E975-4DC2-9DD0-43735035DCEF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{79BEFBF6-149A-4507-B683-BE997D4152C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WearFitter.App.Repository.EFCore", "WearFitter.App.Repository.EFCore\WearFitter.App.Repository.EFCore.csproj", "{42568A93-5060-4C1B-A21F-5697180E8F05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WearFitter.App.Repository.EFCore", "WearFitter.App.Repository.EFCore\WearFitter.App.Repository.EFCore.csproj", "{42568A93-5060-4C1B-A21F-5697180E8F05}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{20F2956E-F42A-42FA-8888-95E5BE10E497}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WearFitter.EFCore.Common", "WearFitter.EFCore.Common\WearFitter.EFCore.Common.csproj", "{1292F722-AE87-49E2-B2F5-9E789B2E869D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WearFitter.EFCore.Common", "WearFitter.EFCore.Common\WearFitter.EFCore.Common.csproj", "{1292F722-AE87-49E2-B2F5-9E789B2E869D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WearFitter.Domain.Common", "WearFitter.Domain.Common\WearFitter.Domain.Common.csproj", "{95A01F70-779C-44B9-B7D5-D6AFD96D3359}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WearFitter.Domain.Common", "WearFitter.Domain.Common\WearFitter.Domain.Common.csproj", "{95A01F70-779C-44B9-B7D5-D6AFD96D3359}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WearFitter.Contracts", "WearFitter.Contracts\WearFitter.Contracts.csproj", "{1C3F4955-F7D5-44EA-8A0A-2724031240A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Contracts", "Contracts", "{96278BD3-8EE1-4983-A2AD-F29B0EA55672}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{BDA46C21-A661-4F07-AFE0-B82D0F57028A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WearFitter.Services.Client", "WearFitter.Services.Client\WearFitter.Services.Client.csproj", "{2E395F42-6F15-4F5A-BD38-1CD1D3930A54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WearFitter.Services.Server", "WearFitter.Services.Server\WearFitter.Services.Server.csproj", "{0A75DB09-C431-48D2-86B1-064634176F3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WearFitter.Web.Infrastructure", "WearFitter.Web.Infrastructure\WearFitter.Web.Infrastructure.csproj", "{D3DA6ED3-4858-4584-9621-2362413525C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +63,22 @@ Global
 		{95A01F70-779C-44B9-B7D5-D6AFD96D3359}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95A01F70-779C-44B9-B7D5-D6AFD96D3359}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95A01F70-779C-44B9-B7D5-D6AFD96D3359}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C3F4955-F7D5-44EA-8A0A-2724031240A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C3F4955-F7D5-44EA-8A0A-2724031240A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C3F4955-F7D5-44EA-8A0A-2724031240A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C3F4955-F7D5-44EA-8A0A-2724031240A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E395F42-6F15-4F5A-BD38-1CD1D3930A54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E395F42-6F15-4F5A-BD38-1CD1D3930A54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E395F42-6F15-4F5A-BD38-1CD1D3930A54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E395F42-6F15-4F5A-BD38-1CD1D3930A54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A75DB09-C431-48D2-86B1-064634176F3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A75DB09-C431-48D2-86B1-064634176F3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A75DB09-C431-48D2-86B1-064634176F3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A75DB09-C431-48D2-86B1-064634176F3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3DA6ED3-4858-4584-9621-2362413525C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3DA6ED3-4858-4584-9621-2362413525C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3DA6ED3-4858-4584-9621-2362413525C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3DA6ED3-4858-4584-9621-2362413525C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +90,10 @@ Global
 		{42568A93-5060-4C1B-A21F-5697180E8F05} = {79BEFBF6-149A-4507-B683-BE997D4152C1}
 		{1292F722-AE87-49E2-B2F5-9E789B2E869D} = {20F2956E-F42A-42FA-8888-95E5BE10E497}
 		{95A01F70-779C-44B9-B7D5-D6AFD96D3359} = {20F2956E-F42A-42FA-8888-95E5BE10E497}
+		{1C3F4955-F7D5-44EA-8A0A-2724031240A4} = {96278BD3-8EE1-4983-A2AD-F29B0EA55672}
+		{2E395F42-6F15-4F5A-BD38-1CD1D3930A54} = {BDA46C21-A661-4F07-AFE0-B82D0F57028A}
+		{0A75DB09-C431-48D2-86B1-064634176F3C} = {BDA46C21-A661-4F07-AFE0-B82D0F57028A}
+		{D3DA6ED3-4858-4584-9621-2362413525C0} = {719C674D-3BB9-4146-B155-942DC7FF91C4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {14DF46E9-1F05-423D-90B9-8D1B2BD186F9}

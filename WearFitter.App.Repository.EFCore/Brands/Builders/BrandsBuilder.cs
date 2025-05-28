@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using WearFitter.App.Domain.Brands.Models;
 
-namespace Cerberus.App.Repository.EFCore.Missions.Builder
+namespace WearFitter.App.Repository.EFCore.Brands.Builders
 {
     internal class BrandsBuilder
     {

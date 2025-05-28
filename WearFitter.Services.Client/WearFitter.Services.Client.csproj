@@ -7,7 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WearFitter.Domain.Common\WearFitter.Domain.Common.csproj" />
+    <ProjectReference Include="..\WearFitter.Contracts\WearFitter.Contracts.csproj" />
+    <ProjectReference Include="..\WearFitter.Web.Infrastructure\WearFitter.Web.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

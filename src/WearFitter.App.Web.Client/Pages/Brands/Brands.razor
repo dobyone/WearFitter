@@ -1,0 +1,26 @@
+﻿@page "/brands"
+
+<PageTitle>Brands</PageTitle>
+
+<h1>Brands</h1>
+
+@if (BrandsList is not null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var brand in BrandsList)
+            {
+                <tr>
+                    <td>@brand.Name</td>
+                    <td>@brand.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

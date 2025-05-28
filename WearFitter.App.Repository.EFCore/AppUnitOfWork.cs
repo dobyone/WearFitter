@@ -9,7 +9,7 @@ namespace WearFitter.App.Repository.EFCore;
 public class AppUnitOfWork(ApplicationDbContext dbContext) :
     UnitOfWork<ApplicationDbContext>(dbContext), IAppUnitOfWork
 {
-    private IShoeFitsRepository? _shoeFitsRepository;
+    //private IShoeFitsRepository? _shoeFitsRepository;
     private IBrandsRepository? _brandsRepository;
 
     #region Repositories
