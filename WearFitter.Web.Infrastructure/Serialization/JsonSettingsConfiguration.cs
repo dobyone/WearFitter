@@ -3,11 +3,10 @@ using Newtonsoft.Json.Converters;
 
 namespace WearFitter.Web.Infrastructure.Serialization;
 
-public static class JsonSettingsConfigurator
+public static class JsonSettingsConfiguration
 {
-    private static JsonSerializerSettings _settings;
-    private static JsonSerializerSettings _settingsWithProtoConverter;
-    private static object _locker = new();
+    private static JsonSerializerSettings? _settings;
+    private readonly static Lock _locker = new();
 
     public static void Configure(JsonSerializerSettings settings)
     {

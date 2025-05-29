@@ -15,7 +15,7 @@ public static class HttpClientExtensions
     static HttpClientExtensions()
     {
         _settings = new JsonSerializerSettings();
-        JsonSettingsConfigurator.Configure(_settings);
+        JsonSettingsConfiguration.Configure(_settings);
     }
 #pragma warning restore S3963 // "static" fields should be initialized inline
 
@@ -50,32 +50,6 @@ public static class HttpClientExtensions
         {
             throw new ApiException($"Response is not of type {typeof(TValue).FullName}", response.StatusCode);
         }
-
-        return result;
-    }
-
-    public static async Task<byte[]> GetFromMessagePackUnpackedAsync(this HttpClient client, string requestUri, CancellationToken cancellationToken = default, bool useCompression = false)
-    {
-        var request = new HttpRequestMessage(HttpMethod.Get, requestUri);
-        request.Headers.Accept.Add(MediaTypeWithQualityHeaderValue.Parse("application/x-msgpack"));
-
-        if (useCompression)
-        {
-            request.Headers.Add("x-compression", "msgpack");
-        }
-
-        HttpResponseMessage response = await client.SendAsync(request);
-
-        await ThrowIfApiError(response);
-
-        response.EnsureSuccessStatusCode();
-
-        if (response.Content.Headers.ContentType.MediaType != "application/x-msgpack")
-        {
-            throw new HttpRequestException($"Response content type is not msgpack: {response.Content.Headers.ContentType.MediaType}", null, System.Net.HttpStatusCode.UnsupportedMediaType);
-        }
-
-        var result = await response.Content.ReadAsByteArrayAsync(cancellationToken);
 
         return result;
     }

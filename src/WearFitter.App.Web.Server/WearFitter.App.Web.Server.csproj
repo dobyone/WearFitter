@@ -7,20 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.4" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.2" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server"/>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools"/>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL"/>
+    <PackageReference Include="Swashbuckle.AspNetCore"/>
+    <PackageReference Include="System.Configuration.ConfigurationManager"/>
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\WearFitter.App.Repository.EFCore\WearFitter.App.Repository.EFCore.csproj" />
-    <ProjectReference Include="..\..\WearFitter.Services.Server\WearFitter.Services.Server.csproj" />
-    <ProjectReference Include="..\WearFitter.App.Web.Client\WearFitter.App.Web.Client.csproj" />
+    <ProjectReference Include="..\..\WearFitter.App.Repository.EFCore\WearFitter.App.Repository.EFCore.csproj"/>
+    <ProjectReference Include="..\..\WearFitter.Services.Server\WearFitter.Services.Server.csproj"/>
+    <ProjectReference Include="..\WearFitter.App.Web.Client\WearFitter.App.Web.Client.csproj"/>
   </ItemGroup>
 
 </Project>
