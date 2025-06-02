@@ -1,0 +1,36 @@
+name: wear-fitter
+services:
+  wearfitter.app.web.server:
+    image: ${DOCKER_REGISTRY-}wearfitterappwebserver
+    container_name: wear-fitter-web-server
+    networks:
+        - wear-fitter-network
+    build:
+      context: .
+      dockerfile: src/WearFitter.App.Web.Server/Dockerfile
+    ports:
+       - 4949:80
+       - 7036:443
+
+  postgres:
+    image: postgres:latest
+    container_name: wear.fitter.postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: P@ssw0rd
+    command: ["postgres", "-c", "port=41902"]
+    ports:
+      - 41902:41902
+    networks:
+      - wear-fitter-network
+    
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sa -p 41902"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+networks:
+  wear-fitter-network:
+    name: wear-fitter-network
+    driver: bridge

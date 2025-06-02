@@ -12,7 +12,10 @@ public class Program
     public static void Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
+        builder.Configuration.AddJsonFile($"appsettings.json");
+        builder.Configuration.AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json");
 
+        Console.WriteLine($"----configuration: {builder.Configuration.GetConnectionString("DefaultConnection")}");
         builder.Services.AddDbContext<ApplicationDbContext>(o =>
                     {
                         o.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));

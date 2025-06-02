@@ -1,23 +1,34 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>137b6230-4b49-4de3-beab-2526ee0849bd</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+    <DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server"/>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools"/>
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL"/>
-    <PackageReference Include="Swashbuckle.AspNetCore"/>
-    <PackageReference Include="System.Configuration.ConfigurationManager"/>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
+    <PackageReference Include="Swashbuckle.AspNetCore" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\WearFitter.App.Repository.EFCore\WearFitter.App.Repository.EFCore.csproj"/>
-    <ProjectReference Include="..\..\WearFitter.Services.Server\WearFitter.Services.Server.csproj"/>
-    <ProjectReference Include="..\WearFitter.App.Web.Client\WearFitter.App.Web.Client.csproj"/>
+    <ProjectReference Include="..\..\WearFitter.App.Repository.EFCore\WearFitter.App.Repository.EFCore.csproj" />
+    <ProjectReference Include="..\..\WearFitter.Services.Server\WearFitter.Services.Server.csproj" />
+    <ProjectReference Include="..\WearFitter.App.Web.Client\WearFitter.App.Web.Client.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="https\aspnetapp.pfx">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
